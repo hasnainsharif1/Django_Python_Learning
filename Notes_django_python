@@ -1,0 +1,18 @@
+1- First we use uv for installing pkjs. (pip install uv)
+2- Then create environment:
+        uv venv
+3- Activate environment .venv\Scripts\activate 
+        Also deactivate by just type deactivate     
+4- Install Django using uv:
+        uv pip instal Django
+5- create new project:
+        django-amin startproject hasnainaurdjango
+6- Run the project:
+        python hasnainaurdjango runserver
+
+///////////////////////////////////////////////////
+File Structure:
+        Check level for each file->
+                1: root level
+                2: project level 
+                3: app level
