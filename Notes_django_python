@@ -16,3 +16,6 @@ File Structure:
                 1: root level
                 2: project level 
                 3: app level
+        
+        urls.py:
+                here we do rooting in this file, rooting means, where you go in which url.
