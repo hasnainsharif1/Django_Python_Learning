@@ -1,3 +1,6 @@
+///////////////// DJANGO //////////////////
+//////////////// Framework of python ////////
+
 1- First we use uv for installing pkjs. (pip install uv)
 2- Then create environment:
         uv venv
@@ -19,3 +22,11 @@ File Structure:
         
         urls.py:
                 here we do rooting in this file, rooting means, where you go in which url.
+
+////////////////   Diagram     ///////////////////
+
+Flow of Django:
+        Send: 
+                user-->(request)-->Django--->user.py---->views.py---->models---->DB
+        Response:(also templates)
+                views.py---->django---->browser---->user
