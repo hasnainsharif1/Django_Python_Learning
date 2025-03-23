@@ -1,10 +1,13 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse("Hello word, I'm currently in home page.")
+    # return HttpResponse("Hello word, I'm currently in home page.")
+
+    return render(request, 'index.html')
 
 def about(request):
-    return HttpResponse("Hello word, I'm currently in about page.")
+    return render(request, 'about.html')
 
 def contact(request):
-    return HttpResponse("Hello word, I'm currently in contac page.")
+    return render(request, 'contact.html')

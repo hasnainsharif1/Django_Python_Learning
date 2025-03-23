@@ -23,6 +23,8 @@ File Structure:
         urls.py:
                 here we do rooting in this file, rooting means, where you go in which url.
 
+****Create two folder's in root directory: name = templates for HTMLfiel and second name= static  for css and javascript files
+
 ////////////////   Diagram     ///////////////////
 
 Flow of Django:
@@ -30,3 +32,33 @@ Flow of Django:
                 user-->(request)-->Django--->user.py---->views.py---->models---->DB
         Response:(also templates)
                 views.py---->django---->browser---->user
+
+////////////////////////////////////////////////
+
+How to Attach HTML and CSS files in djando:
+        """
+                Steps to Link CSS with HTML in Django
+
+                1️⃣ Configure settings.py
+                        import os
+                        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                        STATIC_URL = '/static/'
+                        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+                2️⃣ Create static/ Directory (in the root project folder)
+                Inside static/, create a css/ folder.
+                Example path: static/css/styles.css
+
+                3️⃣ Add CSS File (static/css/styles.css)
+
+                        body { background-color: #f4f4f4; font-family: Arial, sans-serif; }
+                        h1 { color: blue; }
+
+                4️⃣ Modify HTML to Load CSS (templates/index.html)
+                        {% load static %}
+                        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+                5️⃣ Run Django Server & Check
+                python manage.py runserver
+                Open http://127.0.0.1:8000/ to see the styled page. ✅
+        """
