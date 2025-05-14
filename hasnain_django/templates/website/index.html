@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+          <nav class="navbar">
+            <h2 class="logo">YourBrand</h2>
+            <ul class="nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="hero-content">
+            <h1>Build Your Dream Website</h1>
+            <p>Custom, responsive, and fast. We turn your ideas into reality with clean code and sharp design.</p>
+            <a href="{% url 'contact' %}" class="btn">Get Started</a>
+          </div>
+        </div>
+      </header>
+    
+      <section class="features">
+        <div class="container">
+          <h2>Why Choose Us?</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h3>Responsive Design</h3>
+              <p>Looks great on all devices—from mobile to desktop. Pixel-perfect and modern.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Clean Code</h3>
+              <p>Well-structured, readable code that’s easy to maintain and scale.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Fast Performance</h3>
+              <p>Optimized websites that load fast and keep users engaged.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 YourBrand. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
