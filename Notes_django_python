@@ -64,3 +64,6 @@ How to Attach HTML and CSS files in djando:
                 python manage.py runserver
                 Open http://127.0.0.1:8000/ to see the styled page. ✅
         """
+/////////////////////////////////////////////////////
+
+After crearing app in django, first step is to awair it in settings.py file.
