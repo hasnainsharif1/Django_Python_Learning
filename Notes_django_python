@@ -67,3 +67,41 @@ How to Attach HTML and CSS files in djando:
 /////////////////////////////////////////////////////
 
 After crearing app in django, first step is to awair it in settings.py file.
+
+DjandoProject__Documentation
+1. Install django or all other 6 points given above
+
+2. add in settings: ""
+        MEDIA_URL = '/media/'
+        MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+        STATIC_URL = 'static/'
+        STATICFILES_DIRS = os.path.join(BASE_DIR,'static')"
+
+3. Add in urls: "
+        from django.conf import settings
+        from django.conf.urls.static import static
+
+
+        urlpatterns = [
+        path('admin/', admin.site.urls),
+        ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+        "
+
+4. create new app: django-admin startapp tweet 
+        4.1 create new file urls
+        4.3 create new view
+        4.5 add settings in settings.py main about this new app 
+
+
+5.in new app add main_app urls.py data in new app urls.py,
+        5.1: create new view 
+        5.2: create new folder templates and index.html file in it
+
+6: Add templates/layput.html in main app 
+        6.1: Add load or static etc.. next update other apps html file 
+        6.2: Add bostrap link in header main html file
+        6.3: ADD necessary settings like ({% extends "layout.html" %},  data-bs-theme="dark")
+
+7. Next part is to create models in new apps 
+        7.1: in models.py add djnago (from django.contrib.auth.models import User)
